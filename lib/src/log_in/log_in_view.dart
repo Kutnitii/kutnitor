@@ -116,15 +116,10 @@ class _LogInView extends State<LogInView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Article Reviewer'),
-        centerTitle: true,
-        backgroundColor: Colors.white,
-      ),
       body: Center(
         child: SizedBox(
           width: 300,
-          height: 400,
+          height: 450,
           child: Card(
             color: Colors.white,
             surfaceTintColor: Colors.white,
@@ -135,20 +130,24 @@ class _LogInView extends State<LogInView> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
+                    const Align(
+                      alignment: Alignment.centerRight,
+                      child: Image(
+                        width: 250,
+                        height: 80,
+                        image: AssetImage('assets/images/kutniti.png')
+                      ), 
+                      /*Text(
+                        'KUTNITI  FOUNDATION',
+                        style: TextStyle(fontSize: 11, letterSpacing: 2)
+                      )*/
+                    ),
+                    const Expanded(child: SizedBox(height: 16)),
                     usernameWidget(),
                     const SizedBox(height: 16),
                     passwordWidget(),
-                    const SizedBox(height: 8),
+                    const SizedBox(height: 16),
                     logInWidget(),
-                    const Expanded(child: SizedBox(height: 16)),
-                    const Align(
-                      alignment: Alignment.centerRight,
-                      child: Text(
-                        'KUTNITI  FOUNDATION',
-                        style: TextStyle(fontSize: 11, letterSpacing: 2)
-                      )
-                    ),
-                    const Divider(),
                   ],
                 ),
               ),

@@ -1,11 +1,11 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:kutnitor/src/article/web_view_stack.dart';
 import 'package:kutnitor/src/utils/http_client.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 import 'navigation_controller.dart';
-import '../library/web_view_stack.dart';
 import '../settings/settings_controller.dart';
 import '../settings/settings_view.dart';
 import '../utils/fancy_floating_button.dart';

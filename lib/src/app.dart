@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:kutnitor/src/article/article.dart';
 
-import 'log_in/log_in_view_v1.dart';
-import 'log_in/log_in_view_v2.dart';
+import 'log_in/log_in_view.dart';
 import 'article/articleView.dart';
-import 'library/library_view.dart';
 import 'settings/settings_controller.dart';
 import 'settings/settings_view.dart';
 
@@ -76,13 +74,11 @@ class MyApp extends StatelessWidget {
                 switch (routeSettings.name) {
                   case SettingsView.routeName:
                     return SettingsView(controller: settingsController);
-                  case LibraryView.routeName:
-                    return const LibraryView();
                   case ArticleView.routeName:
                     return ArticleView(settingsController: settingsController);
                   case LogInView.routeName:
                   default:
-                    return const LogInViewV2();
+                    return const LogInView();
                 }
               },
             );
