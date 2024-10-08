@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kutnitor/src/article/articleView.dart';
 import 'package:kutnitor/src/log_in/log_in_service.dart';
+import 'package:kutnitor/src/settings/settings_view.dart';
 
 import 'log_in_controller.dart';
 
@@ -116,6 +117,19 @@ class _LogInView extends State<LogInView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.settings),
+            onPressed: () {
+              // Navigate to the settings page. If the user leaves and returns
+              // to the app after it has been killed while running in the
+              // background, the navigation stack is restored.
+              Navigator.restorablePushNamed(context, SettingsView.routeName);
+            },
+          ),
+        ],
+      ),
       body: Center(
         child: SizedBox(
           width: 300,
