@@ -78,7 +78,7 @@ class MyApp extends StatelessWidget {
                     return ArticleView(settingsController: settingsController);
                   case LogInView.routeName:
                   default:
-                    return const LogInView();
+                    return ArticleView(settingsController: settingsController);
                 }
               },
             );
