@@ -3,21 +3,18 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:kutnitor/src/article/article.dart';
 
 import 'log_in/log_in_view.dart';
-import 'article/articleView.dart';
+import 'article/article_view.dart';
 import 'settings/settings_controller.dart';
 import 'settings/settings_view.dart';
 
 /// The Widget that configures your application.
 class MyApp extends StatelessWidget {
-  MyApp({
+  const MyApp({
     super.key,
     required this.settingsController,
   });
 
   final SettingsController settingsController;
-
-  final List<Article> articles = List<Article>.generate(100, (i) => Article(i + 1, "Title ${i + 1}"));
-  final List<String> countries = List<String>.generate(100, (i) => "Country ${i + 1}");
 
   @override
   Widget build(BuildContext context) {

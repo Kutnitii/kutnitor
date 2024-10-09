@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kutnitor/src/article/articleView.dart';
+import 'package:kutnitor/src/article/article_view.dart';
 import 'package:kutnitor/src/log_in/log_in_service.dart';
 import 'package:kutnitor/src/settings/settings_view.dart';
 
