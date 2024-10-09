@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kutnitor/src/log_in/log_in_view.dart';
 import 'package:kutnitor/src/settings/settings_controller.dart';
-import 'package:kutnitor/src/settings/settings_view.dart';
-import 'package:kutnitor/src/utils/http_client.dart';
 
 class ArticleTopBar extends StatefulWidget implements PreferredSizeWidget {
   const ArticleTopBar({
@@ -52,13 +49,7 @@ class _ArticleTopBar extends State<ArticleTopBar> {
       actions: [
         IconButton(
           icon: const Icon(Icons.settings),
-          onPressed: () {
-            HttpClient().removeToken();
-            Navigator.popUntil(
-              context,
-              ModalRoute.withName(LogInView.routeName)
-            );
-          }
+          onPressed: () {}
         ),
       ],
     );

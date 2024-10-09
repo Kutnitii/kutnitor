@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:kutnitor/src/article/article.dart';
 
 import 'log_in/log_in_view.dart';
 import 'article/article_view.dart';
