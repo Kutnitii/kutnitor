@@ -48,7 +48,7 @@ class _ArticleView extends State<ArticleView> {
       "Mango", "Changria", "Ariane", "Navrati", "Geometry", "Test",
     ];
     return Scaffold(
-      appBar: ArticleTopBar(tags: tags, settingsController: widget.settingsController),
+      appBar: ArticleTopBar(tags: tags),
       body: WebViewWidget(controller: controller),
       floatingActionButton: const ArticleBottomButtons(),
     );

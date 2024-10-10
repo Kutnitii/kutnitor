@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:kutnitor/src/settings/settings_controller.dart';
+import 'package:kutnitor/src/settings/settings_view.dart';
 
 class ArticleTopBar extends StatefulWidget implements PreferredSizeWidget {
   const ArticleTopBar({
     super.key,
     required this.tags,
-    required this.settingsController
   });
 
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 
   final List<String> tags;
-  final SettingsController settingsController;
 
   @override
   State<ArticleTopBar> createState() => _ArticleTopBar(); 
@@ -49,7 +47,7 @@ class _ArticleTopBar extends State<ArticleTopBar> {
       actions: [
         IconButton(
           icon: const Icon(Icons.settings),
-          onPressed: () {}
+          onPressed: () => Navigator.restorablePushNamed(context, SettingsView.routeName)
         ),
       ],
     );
