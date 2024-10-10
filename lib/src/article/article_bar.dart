@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:kutnitor/src/log_in/log_in_view.dart';
 import 'package:kutnitor/src/settings/settings_view.dart';
+import 'package:kutnitor/src/utils/http_client.dart';
 
 class ArticleTopBar extends StatefulWidget implements PreferredSizeWidget {
   const ArticleTopBar({
@@ -24,7 +26,10 @@ class _ArticleTopBar extends State<ArticleTopBar> {
     return AppBar(
       leading: IconButton(
         icon: const Icon(Icons.logout_outlined),
-        onPressed: () {},
+        onPressed: () {
+          HttpClient().removeToken();
+          Navigator.restorablePopAndPushNamed(context, LogInView.routeName);
+        },
       ),
       title: SizedBox(
         height: widget.preferredSize.height,
@@ -69,21 +74,25 @@ class _ArticleBottomButtons extends State<ArticleBottomButtons> {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <FloatingActionButton>[
         FloatingActionButton(
+          heroTag: 'UndoButton',
           onPressed: () {},
           tooltip: 'Undo',
           child: const Icon(Icons.undo),
         ),
         FloatingActionButton(
+          heroTag: 'PositiveButton',
           onPressed: () {},
           tooltip: 'Positive media',
           child: const Icon(Icons.thumb_up),
         ),
         FloatingActionButton(
+          heroTag: 'NeutralButton',
           onPressed: () {},
           tooltip: 'Neutral media',
           child: const Icon(Icons.sentiment_neutral),
         ),
         FloatingActionButton(
+          heroTag: 'NegativeButton',
           onPressed: () {},
           tooltip: 'Negative media',
           child: const Icon(Icons.thumb_down),

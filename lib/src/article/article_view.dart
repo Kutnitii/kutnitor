@@ -5,14 +5,11 @@ import 'package:kutnitor/src/utils/http_client.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 import 'article_bar.dart';
-import '../settings/settings_controller.dart';
 
 class ArticleView extends StatefulWidget {
-  const ArticleView({super.key, required this.settingsController});
+  const ArticleView({super.key});
 
   static const String routeName = '/article';
-
-  final SettingsController settingsController;
 
   @override
   State<ArticleView> createState() => _ArticleView();

@@ -17,7 +17,7 @@ class _WebViewStackState extends State<WebViewStack> {
   void initState() {
     super.initState();
     widget.controller
-      ..setNavigationDelegate(NavigationDelegate(
+      .setNavigationDelegate(NavigationDelegate(
         onPageStarted: (url) {
           setState(() {
             loadingPercentage = 0;
@@ -49,8 +49,7 @@ class _WebViewStackState extends State<WebViewStack> {
           return NavigationDecision.navigate;
         },
       ),
-    )
-    ..setJavaScriptMode(JavaScriptMode.unrestricted);
+    );
   }
 
   @override

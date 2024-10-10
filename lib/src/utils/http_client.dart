@@ -7,7 +7,7 @@ class HttpClient {
   static final HttpClient _instance = HttpClient._();
   
   final http.Client _client = http.Client();
-  static const String _baseUrl = 'http://192.168.1.11:5000';
+  static const String _baseUrl = 'http://192.168.1.10:5000';
   String? _token;
 
   HttpClient._();
