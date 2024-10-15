@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kutnitor/src/log_in/log_in_view.dart';
 import 'package:kutnitor/src/settings/settings_view.dart';
 import 'package:kutnitor/src/utils/http_client.dart';
 
@@ -28,7 +27,7 @@ class _ArticleTopBar extends State<ArticleTopBar> {
         icon: const Icon(Icons.logout_outlined),
         onPressed: () {
           HttpClient().removeToken();
-          Navigator.restorablePopAndPushNamed(context, LogInView.routeName);
+          Navigator.pop(context);
         },
       ),
       title: SizedBox(

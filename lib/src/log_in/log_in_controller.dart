@@ -36,6 +36,7 @@ class LogInController {
         Map<String, dynamic> decodedResponse = jsonDecode(utf8.decode(response.bodyBytes)) as Map<String, dynamic>;
         if (response.statusCode == 200) {
           _logInService.updateToken(decodedResponse['token']);
+          _passwordController.clear();
           ScaffoldMessenger.of(context).clearSnackBars();
           return true;
         } else {
